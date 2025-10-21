@@ -1,4 +1,4 @@
-# 🪶 Seal Project Demo
+# Seal Project Demo
 
 
 ## Current Features
@@ -8,7 +8,7 @@
 - Planned VR handwriting input testing  
 
 
-## ⚙️ Unreal Engine Setup
+## Unreal Engine Setup
 
 **Engine Version:** Unreal Engine 5.5.3  
 
@@ -20,7 +20,7 @@
 | **LE Extended Standard Library** | Extends Unreal Engine's blueprint and C++ utility library. | [LE Extended Standard Library on Fab](https://www.fab.com/zh-cn/listings/0aadd41b-c02d-4f63-9009-bffad0070ebc) |
 
 
-## 🧩 Editor Settings
+## Editor Settings
 
 Ensure the following settings are configured before running the project:
 
@@ -38,7 +38,7 @@ Ensure the following settings are configured before running the project:
    - NNEngine will automatically utilize its GPU runtime instead.
 
 
-## ✍️ Handwriting System Notes
+## Handwriting System Notes
 
 - The handwriting rendering system outputs to a **Render Target 2D**.  
 - To ensure **non-tiling** resizing behavior in NNEngine's image preprocessing:
@@ -48,10 +48,10 @@ Example:
 If the height is `256 px`, the width should be approximately `1689 px`.
 
 
-## 🧪 Testing Status
+## Testing Status
 
 | Platform | Status | Notes |
 |-----------|---------|-------|
 | **PC Input** | ✅ Tested | Handwriting + OCR integration verified |
-| **VR Input** | 🔧 Planned | To be tested in upcoming phase |
+| **VR Input** | Planned | To be tested in upcoming phase |
 
