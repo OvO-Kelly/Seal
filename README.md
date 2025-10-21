@@ -1,6 +1,5 @@
 # 🪶 Seal Project Demo
 
----
 
 ## Current Features
 - Handwriting recognition system integrated with the OCR pipeline  
@@ -8,7 +7,6 @@
 - Neural network with NNEngine (GPU supported)  
 - Planned VR handwriting input testing  
 
----
 
 ## ⚙️ Unreal Engine Setup
 
@@ -21,7 +19,6 @@
 | **NNEngine - Neural Network Engine** | Provides runtime inference and GPU acceleration for neural network models. | [NNEngine on Fab](https://www.fab.com/zh-cn/listings/67591270-75f6-456d-aa89-c64e1e0ee05f) |
 | **LE Extended Standard Library** | Extends Unreal Engine's blueprint and C++ utility library. | [LE Extended Standard Library on Fab](https://www.fab.com/zh-cn/listings/0aadd41b-c02d-4f63-9009-bffad0070ebc) |
 
----
 
 ## 🧩 Editor Settings
 
@@ -40,7 +37,6 @@ Ensure the following settings are configured before running the project:
 4. **Disable NNERuntimeORT** *(if using GPU)*  
    - NNEngine will automatically utilize its GPU runtime instead.
 
----
 
 ## ✍️ Handwriting System Notes
 
@@ -51,7 +47,6 @@ Ensure the following settings are configured before running the project:
 Example:  
 If the height is `256 px`, the width should be approximately `1689 px`.
 
----
 
 ## 🧪 Testing Status
 
@@ -60,4 +55,3 @@ If the height is `256 px`, the width should be approximately `1689 px`.
 | **PC Input** | ✅ Tested | Handwriting + OCR integration verified |
 | **VR Input** | 🔧 Planned | To be tested in upcoming phase |
 
----
