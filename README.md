@@ -59,8 +59,8 @@ Ensure the following settings are configured before running the project:
 
 The following controller bindings are **temporary for testing** the handwriting and OCR systems:
 
-| Controller | Action | Function |
-|-------------|---------|-----------|
+| Controller | Action |
+|-------------|---------|
 | **Left Controller - Grab** | Clears the handwriting canvas |
 | **Left Controller - Top Button** | Triggers the OCR inference process |
 
