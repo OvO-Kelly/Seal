@@ -43,9 +43,28 @@ Ensure the following settings are configured before running the project:
 - The handwriting rendering system outputs to a **Render Target 2D**.  
 - To ensure **non-tiling** resizing behavior in NNEngine's image preprocessing:
   > The Render Target 2D **aspect ratio** should be **6.6 : 1**.
+  Example:  
+   If the height is `256 px`, the width should be approximately `1689 px`.
+- **Forward Shading** is **incompatible** with **Render Target Additive** blending.  
+   - To ensure the handwriting system works correctly, **either**:
+   1. **Disable Forward Shading** in Project Settings, **or**  
+   2. **Set the brush material (`Brush_Mat`) to Unlit**.
+   #### Recommendation:
+   - Using **Unlit Brush_Mat** keeps the handwriting system **running smoothly on PC**.  
+   - Disabling Forward Shading may keep brush material properties flexible, **but can overwhelm the GPU**.  
+   - Currently, the **Brush_Mat is Unlit** for a more stable testing environment.
 
-Example:  
-If the height is `256 px`, the width should be approximately `1689 px`.
+
+### Test Instructions (Current Bindings)
+
+The following controller bindings are **temporary for testing** the handwriting and OCR systems:
+
+| Controller | Action | Function |
+|-------------|---------|-----------|
+| **Left Controller - Grab** | Clears the handwriting canvas |
+| **Left Controller - Top Button** | Triggers the OCR inference process |
+
+> These bindings are for **testing only** and may change in future versions.
 
 
 ## Testing Status
@@ -53,5 +72,5 @@ If the height is `256 px`, the width should be approximately `1689 px`.
 | Platform | Status | Notes |
 |-----------|---------|-------|
 | **PC Input** | ✅ Tested | Handwriting + OCR integration verified |
-| **VR Input** | Planned | To be tested in upcoming phase |
+| **VR Input** | ✅ Tested | To be tested in upcoming phase |
 
