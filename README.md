@@ -6,6 +6,7 @@
 - PC input successfully tested on separated threads  
 - Neural network with NNEngine (GPU supported)  
 - Planned VR handwriting input testing  
+- Smooth Writing (10-24)
 
 
 ## Unreal Engine Setup
