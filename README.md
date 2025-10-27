@@ -3,9 +3,8 @@
 
 ## Current Features
 - Handwriting recognition system integrated with the OCR pipeline  
-- PC input successfully tested on separated threads  
-- Neural network with NNEngine (GPU supported)  
-- Planned VR handwriting input testing  
+- Input successfully tested on separated threads  
+- Neural network with NNEngine (GPU supported) 
 - Smooth Writing (10-24)
 
 
