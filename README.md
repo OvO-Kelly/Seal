@@ -6,6 +6,7 @@
 - Input successfully tested on separated threads  
 - Neural network with NNEngine (GPU supported) 
 - Smooth Writing (10-24)
+- Flip Right Hand for "Seal Carving" (10-29)
 
 
 ## Unreal Engine Setup
@@ -53,6 +54,30 @@ Ensure the following settings are configured before running the project:
    - Using **Unlit Brush_Mat** keeps the handwriting system **running smoothly on PC**.  
    - Disabling Forward Shading may keep brush material properties flexible, **but can overwhelm the GPU**.  
    - Currently, the **Brush_Mat is Unlit** for a more stable testing environment.
+
+## Seal Carving with Flipped Right Controller
+
+During the **seal carving phase**, the **right-hand controller** represents the player’s hand holding the carving knife.
+
+- The **right-hand mesh** should be **the right hand with the carving knife mesh** by default.  
+- The **tip of the knife** must align **exactly with the tip and direction of the original index finger** —  
+  this ensures accurate positioning and direction when carving.  
+
+### Carving Action Simulation
+To simulate realistic carving motion:
+
+https://github.com/user-attachments/assets/0a1c5c5c-9e22-4131-8866-4efd390f2e56
+
+
+- Use a **special controller holding pose** (as demonstrated in the reference video).  
+- The **bottom tip of the right controller** acts as the **aim point** on the surface.  
+- Use your **thumb to press the "Grab" button** — this controls whether the carving action applies at the current position.
+
+> In short:  
+> - **Right-hand mesh** → Right-hand mesh + Knife mesh  
+> - **Knife tip** → Same point & direction as finger tip  
+> - **Grab (thumb)** → Controls carving activation  
+> - **Pose** → Special carving grip for realism
 
 
 ### Test Instructions (Current Bindings)
