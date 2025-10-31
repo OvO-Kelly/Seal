@@ -73,6 +73,16 @@ https://github.com/user-attachments/assets/0a1c5c5c-9e22-4131-8866-4efd390f2e56
 - The **bottom tip of the right controller** acts as the **aim point** on the surface.  
 - Use your **thumb to press the "Grab" button** — this controls whether the carving action applies at the current position.
 
+### Seal_BP Testing and Debug Tools
+
+A blueprint named **`Seal_BP`** allows players to pick up and carve directly on the seal stone —  
+the logic is similar to handwriting, but carving requires **closer distance and reversed grip**.
+
+- A **debug arrow** is added to visualize the **right hand’s aim position and direction**.  
+- The **arrow’s length** equals the **maximum carving distance from hand position** on the `Seal_BP`.  
+  When the **arrow tip touches the surface**, holding **Grab** begins carving.  
+- Future **knife meshes** can use this arrow as a reference for correct length and alignment.
+
 > In short:  
 > - **Right-hand mesh** → Right-hand mesh + Knife mesh  
 > - **Knife tip** → Same point & direction as finger tip  
@@ -88,6 +98,8 @@ The following controller bindings are **temporary for testing** the handwriting 
 |-------------|---------|
 | **Left Controller - Grab** | Clears the handwriting canvas |
 | **Left Controller - Top Button** | Triggers the OCR inference process |
+| **Right Controller - Top Button** | Flip the right controller and triggers 'ready to carve' |
+| **Right Controller - Grab Button** | Write on canvas or (if controller flipped) carve on Seal_BP |
 
 > These bindings are for **testing only** and may change in future versions.
 
