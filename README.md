@@ -7,6 +7,9 @@
 - Neural network with NNEngine (GPU supported) 
 - Smooth Writing (10-24)
 - Flip Right Hand for "Seal Carving" (10-29)
+- Dynamic right-hand mesh switching (11-3):
+  - Switches between **Brush** and **Carving Tool** based on whether the player is **looking at the Canvas (`Yin55`) or the Seal (`Seal_BP`)**  
+  - Back to Hand if not looking at either
 
 
 ## Unreal Engine Setup
