@@ -7,10 +7,8 @@
 - Neural network with NNEngine (GPU supported) 
 - Smooth Writing (10-24)
 - Flip Right Hand for "Seal Carving" (10-29)
-- Dynamic right-hand mesh switching (11-3):
-  - Switches between **Brush** and **Carving Tool** based on whether the player is **looking at the Canvas (`Yin55`) or the Seal (`Seal_BP`)**  
-  - Back to Hand if not looking at either
-
+- Dynamic right-hand mesh switching (11-3)
+- Carvable Region Detecting (11-4)
 
 ## Unreal Engine Setup
 
@@ -36,7 +34,7 @@ Ensure the following settings are configured before running the project:
 
 3. **Enable Plugins**
    - ✅ NNEngine  
-   - ✅ LE Extended Standard Library  
+   - ✅ Victory Plugins (Already in the project. Enable it in project settings)  
 
 4. **Disable NNERuntimeORT** *(if using GPU)*  
    - NNEngine will automatically utilize its GPU runtime instead.
@@ -60,10 +58,10 @@ Ensure the following settings are configured before running the project:
 
 ## Seal Carving with Flipped Right Controller
 
-During the **seal carving phase**, the **right-hand controller** represents the player’s hand holding the carving knife.
+During the **seal carving phase**, the **right-hand controller** represents the player's hand holding the carving knife. **Only the "RED" region is considered carvable to trigger carving functions.**
 
 - The **right-hand mesh** should be **the right hand with the carving knife mesh** by default.  
-- The **tip of the knife** must align **exactly with the tip and direction of the original index finger** —  
+- The **tip of the knife** must align **exactly with the tip and direction of the original index finger** -  
   this ensures accurate positioning and direction when carving.  
 
 ### Carving Action Simulation
@@ -74,15 +72,15 @@ https://github.com/user-attachments/assets/0a1c5c5c-9e22-4131-8866-4efd390f2e56
 
 - Use a **special controller holding pose** (as demonstrated in the reference video).  
 - The **bottom tip of the right controller** acts as the **aim point** on the surface.  
-- Use your **thumb to press the "Grab" button** — this controls whether the carving action applies at the current position.
+- Use your **thumb to press the "Grab" button** - this controls whether the carving action applies at the current position.
 
 ### Seal_BP Testing and Debug Tools
 
-A blueprint named **`Seal_BP`** allows players to pick up and carve directly on the seal stone —  
+A blueprint named **`Seal_BP`** allows players to pick up and carve directly on the seal stone -  
 the logic is similar to handwriting, but carving requires **closer distance and reversed grip**.
 
-- A **debug arrow** is added to visualize the **right hand’s aim position and direction**.  
-- The **arrow’s length** equals the **maximum carving distance from hand position** on the `Seal_BP`.  
+- A **debug arrow** is added to visualize the **right hand's aim position and direction**.  
+- The **arrow's length** equals the **maximum carving distance from hand position** on the `Seal_BP`.  
   When the **arrow tip touches the surface**, holding **Grab** begins carving.  
 - Future **knife meshes** can use this arrow as a reference for correct length and alignment.
 
@@ -101,7 +99,6 @@ The following controller bindings are **temporary for testing** the handwriting 
 |-------------|---------|
 | **Left Controller - Grab** | Clears the handwriting canvas |
 | **Left Controller - Top Button** | Triggers the OCR inference process |
-| **Right Controller - Top Button** | Flip the right controller and triggers 'ready to carve' |
 | **Right Controller - Grab Button** | Write on canvas or (if controller flipped) carve on Seal_BP |
 
 > These bindings are for **testing only** and may change in future versions.
