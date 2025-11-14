@@ -9,6 +9,12 @@
 - Flip Right Hand for "Seal Carving" (10-29)
 - Dynamic right-hand mesh switching (11-3)
 - Carvable Region Detecting (11-4)
+- Smooth Carving with Collision Detection (11-13)
+
+## Current DEMO Flow
+- Stage 1: Start  > Press Left-top button to enter Stage 2
+- Stage 2: Writing > Press Left-top button to enter Stage 3
+- Stage 3: Carving
 
 ## Unreal Engine Setup
 
@@ -98,7 +104,7 @@ The following controller bindings are **temporary for testing** the handwriting 
 | Controller | Action |
 |-------------|---------|
 | **Left Controller - Grab** | Clears the handwriting canvas |
-| **Left Controller - Top Button** | Triggers the OCR inference process |
+| **Left Controller - Top Button** | Enters the next stage of DEMO |
 | **Right Controller - Grab Button** | Write on canvas or (if controller flipped) carve on Seal_BP |
 
 > These bindings are for **testing only** and may change in future versions.
