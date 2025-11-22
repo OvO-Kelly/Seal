@@ -10,6 +10,7 @@
 - Dynamic right-hand mesh switching (11-3)
 - Carvable Region Detecting (11-4)
 - Smooth Carving with Collision Detection (11-13)
+- Image to G-Code for Laser (11-21)
 
 ## Current DEMO Flow
 - Stage 1: Start  > Press Left-top button to enter Stage 2
